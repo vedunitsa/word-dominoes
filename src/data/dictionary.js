@@ -71,13 +71,13 @@ export const wordsList = [
 
   // Сладости
   { word: "Шоколад", categories: [SWEETS], emoji: "🍫" },
-  { word: "Печенье", categories: [SWEETS], emoji: "🍪" },
-  { word: "Кекс", categories: [SWEETS], emoji: "🧁" },
+  { word: "Печенье", categories: [SWEETS, BAKERY], emoji: "🍪" },
+  { word: "Кекс", categories: [SWEETS, BAKERY], emoji: "🧁" },
   { word: "Мармелад", categories: [SWEETS], emoji: "🍬" },
   { word: "Зефир", categories: [SWEETS], emoji: "🍡" },
   { word: "Мороженое", categories: [SWEETS], emoji: "🍨" },
   { word: "Леденец", categories: [SWEETS], emoji: "🍭" },
-  { word: "Вафли", categories: [SWEETS], emoji: "🧇" },
+  { word: "Вафли", categories: [SWEETS, BAKERY], emoji: "🧇" },
   { word: "Пудинг", categories: [SWEETS], emoji: "🍮" },
 
   // Выпечка
@@ -85,7 +85,7 @@ export const wordsList = [
   { word: "Круассан", categories: [BAKERY], emoji: "🥐" },
   { word: "Багет", categories: [BAKERY], emoji: "🥖" },
   { word: "Лаваш", categories: [BAKERY], emoji: "🫓" },
-  { word: "Пирог", categories: [BAKERY], emoji: "🥧" },
+  { word: "Пирог", categories: [BAKERY, SWEETS], emoji: "🥧" },
   { word: "Крендель", categories: [BAKERY], emoji: "🥨" },
   { word: "Тост", categories: [BAKERY], emoji: "🍞" },
   { word: "Сэндвич", categories: [BAKERY], emoji: "🥪" },
@@ -164,10 +164,10 @@ export const wordsList = [
   { word: "Фиалка", categories: [FLOWERS], emoji: "🌸" },
 
   // Деревья
-  { word: "Дерево", categories: [PLANTS], emoji: "🌳" },
-  { word: "Бамбук", categories: [PLANTS], emoji: "🎍" },
-  { word: "Пальма", categories: [PLANTS], emoji: "🌴" },
-  { word: "Ель", categories: [PLANTS], emoji: "🌲" },
+  { word: "Дерево", categories: [TREES], emoji: "🌳" },
+  { word: "Бамбук", categories: [TREES], emoji: "🎍" },
+  { word: "Пальма", categories: [TREES], emoji: "🌴" },
+  { word: "Ель", categories: [TREES], emoji: "🌲" },
 
   // Погода
   { word: "Солнце", categories: [WEATHER], emoji: "☀️" },

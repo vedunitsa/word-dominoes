@@ -40,6 +40,9 @@ const DominoTile = ({ tile, isOpen, onClick, isHandTile, isDeckTile }) => {
           <div className={`half bottom-half ${getEmojiClass(tile.val2)} ${tile.isMatched === 'bottom' ? 'matched-glow' : ''}`}>
             {tile.val2.display}
           </div>
+          {tile.isMatched && !isHandTile && (
+            <div className="floating-score">+10</div>
+          )}
         </>
       ) : (
         <div className="domino-back">

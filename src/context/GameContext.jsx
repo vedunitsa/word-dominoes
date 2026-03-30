@@ -52,6 +52,7 @@ export const GameProvider = ({ children }) => {
   const [hand, setHand] = useState([]); // Очередь (до 9 штук)
   const [gameState, setGameState] = useState('playing'); // playing, won, lost
   const [currentLevelIndex, setCurrentLevelIndex] = useState(0);
+  const [score, setScore] = useState(0);
   const [lastMatchDebug, setLastMatchDebug] = useState(null);
 
   useEffect(() => {
@@ -75,6 +76,7 @@ export const GameProvider = ({ children }) => {
     setDeck(newDeck.slice(initialHandSize));
     setGameState('playing');
     setLastMatchDebug(null);
+    setScore(0);
   };
 
   // Проверка открыто ли домино на доске (находится ли оно на самом верху своей кучки)
@@ -167,6 +169,7 @@ export const GameProvider = ({ children }) => {
       // Совпадение! Сохраняем строку 'top' или 'bottom' чтобы подсветить только половинку
       setBoard(prev => prev.map(t => t.id === tileId ? { ...t, isMatched: matchResult.boardHalf } : t));
       setHand(prev => prev.map((t, idx) => idx === 0 ? { ...t, isMatched: matchResult.handHalf } : t));
+      setScore(prev => prev + 10);
       
       // Ждем 1500мс, затем удаляем
       setTimeout(() => {
@@ -250,7 +253,7 @@ export const GameProvider = ({ children }) => {
 
   return (
     <GameContext.Provider value={{
-      board, deck, hand, gameState, currentLevelIndex, lastMatchDebug,
+      board, deck, hand, gameState, currentLevelIndex, lastMatchDebug, score,
       startNewGame, drawFromDeck, handleBoardTileClick, isTileOpen
     }}>
       {children}

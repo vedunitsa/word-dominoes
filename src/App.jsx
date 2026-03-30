@@ -4,14 +4,14 @@ import GameBoard from './components/GameBoard';
 import Hand from './components/Hand';
 
 const GameContainer = () => {
-  const { gameState, startNewGame, currentLevelIndex, lastMatchDebug } = useGame();
+  const { gameState, startNewGame, currentLevelIndex, lastMatchDebug, score } = useGame();
 
   return (
     <>
       <header className="game-header">
         <h1 className="game-title">Word Dominoes</h1>
         <div className="status-badge">
-          Уровень {currentLevelIndex + 1}
+          Уровень {currentLevelIndex + 1} | Очки: {score}
         </div>
       </header>
 

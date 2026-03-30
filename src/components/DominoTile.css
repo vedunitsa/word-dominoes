@@ -141,3 +141,33 @@
   border-bottom-right-radius: 10px;
   box-shadow: inset 0 0 15px rgba(255, 150, 0, 0.8);
 }
+
+/* Всплывающий текст с очками */
+.floating-score {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-weight: 800;
+  font-size: 28px;
+  text-shadow: 0 4px 6px rgba(0,0,0,0.6), 0 0 10px #ff0;
+  pointer-events: none;
+  animation: floatUp 1.5s ease-out forwards;
+  z-index: 200;
+}
+
+@keyframes floatUp {
+  0% { 
+    opacity: 0; 
+    transform: translate(-50%, 0) scale(0.5); 
+  }
+  15% { 
+    opacity: 1; 
+    transform: translate(-50%, -10px) scale(1.3); 
+  }
+  100% { 
+    opacity: 0; 
+    transform: translate(-50%, -60px) scale(1); 
+  }
+}
