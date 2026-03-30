@@ -1,0 +1,143 @@
+.domino-tile {
+  width: 60px;
+  height: 110px;
+  background-color: var(--domino-bg);
+  border-radius: 12px;
+  border: 2px solid var(--domino-border);
+  box-shadow: 0 6px 0 #babaa5, 0 10px 10px var(--domino-shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute; /* По-умолчанию для пирамиды */
+  cursor: pointer;
+  transition: transform 0.2s, filter 0.2s, box-shadow 0.2s, top 0.3s, left 0.3s;
+  overflow: hidden;
+}
+
+/* При наведении (только если открыта) */
+.domino-tile.open:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 11px 0 #babaa5, 0 15px 15px var(--domino-shadow);
+}
+
+.domino-tile:active {
+  transform: translateY(3px);
+  box-shadow: 0 3px 0 #babaa5, 0 5px 5px var(--domino-shadow);
+}
+
+.domino-tile.closed {
+  filter: brightness(0.7) contrast(0.9);
+  cursor: not-allowed;
+  box-shadow: 0 4px 0 #babaa5, 0 5px 5px var(--domino-shadow);
+  transform: translateY(2px);
+}
+
+.domino-tile.closed:hover {
+  transform: translateY(2px);
+}
+
+/* Разделительная линия посерединке */
+.domino-tile .divider {
+  width: 80%;
+  height: 2px;
+  background-color: var(--domino-border);
+}
+
+.domino-tile .half {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 11px; /* Слова должны влазить */
+  padding: 0 2px;
+  word-break: break-all; /* Если слово длинное */
+}
+
+.domino-tile .half.is-emoji {
+  font-size: var(--text-emoji);
+  word-break: normal;
+}
+
+/* Стили для костяшек в руке: они могут быть в relative/очереди */
+.domino-tile.hand-tile {
+  position: relative;
+  width: 44px; /* Чуть поменьше для руки, чтобы влезло 9 штук */
+  height: 80px;
+  box-shadow: 0 4px 0 #babaa5, 0 5px 5px var(--domino-shadow);
+  border-radius: 8px;
+  margin: 0 -5px; /* Наслаиваем друг на дружку для компактности, если хочется */
+}
+
+/* Активное домино в руке (крайнее) */
+.active-slot .domino-tile.hand-tile {
+  width: 50px;
+  height: 90px;
+  margin: 0;
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 230, 0, 0.8), 0 5px 0 #babaa5;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.domino-tile.hand-tile .half {
+  font-size: 9px;
+}
+
+.domino-tile.hand-tile .half.is-emoji {
+  font-size: 20px;
+}
+
+/* Стили для рубашки (закрытого домино) */
+.domino-back {
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    45deg,
+    #2c3e50,
+    #2c3e50 10px,
+    #34495e 10px,
+    #34495e 20px
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-pattern {
+  width: 60%;
+  height: 60%;
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+}
+
+/* Анимация приподнятия доминошки целиком */
+.domino-tile.matched-tile {
+  transform: scale(1.05) translateY(-5px);
+  z-index: 100 !important; 
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5), 0 6px 0 #babaa5;
+}
+
+/* Свечение только на совпавшей половинке */
+.domino-tile .half.matched-glow {
+  background-color: #ffd700;
+  color: #000;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+}
+
+.domino-tile .top-half.matched-glow {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: inset 0 0 15px rgba(255, 150, 0, 0.8);
+}
+
+.domino-tile .bottom-half.matched-glow {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: inset 0 0 15px rgba(255, 150, 0, 0.8);
+}

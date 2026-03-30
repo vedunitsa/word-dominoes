@@ -1,0 +1,17 @@
+.game-board {
+  flex: 1; /* Занимает всю центральную часть между хедером и рукой */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Центрируем пирамиду */
+  perspective: 1000px; /* Для 3D-эффекта тени, если понадобится */
+  padding-bottom: 20px;
+}
+
+.board-grid {
+  position: relative;
+  width: 400px; 
+  height: 400px; 
+  /* Мы позиционируем все тайлы абсолютно внутри grid'а, 
+     поэтому grid должен иметь фиксированные размеры для центровки */
+}
