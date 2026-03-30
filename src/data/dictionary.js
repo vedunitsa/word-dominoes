@@ -46,43 +46,69 @@ export const CATEGORIES = {
 
 export const wordsList = [
   // Фрукты
-  { word: "Лимон", categories: [FRUITS], emoji: "🍋" },
-  { word: "Яблоко", categories: [FRUITS], emoji: "🍎" },
-  { word: "Банан", categories: [FRUITS], emoji: "🍌" },
-  { word: "Арбуз", categories: [FRUITS], emoji: "🍉" },
-  { word: "Киви", categories: [FRUITS], emoji: "🥝" },
-  { word: "Апельсин", categories: [FRUITS], emoji: "🍊" },
-  { word: "Вишня", categories: [FRUITS], emoji: "🍒" },
-  { word: "Клубника", categories: [FRUITS], emoji: "🍓" },
+  { word: "Груша", categories: [FRUITS], emoji: "🍐" },
+  { word: "Персик", categories: [FRUITS], emoji: "🍑" },
+  { word: "Слива", categories: [FRUITS], emoji: "🍑" },
+  { word: "Манго", categories: [FRUITS], emoji: "🥭" },
+  { word: "Ананас", categories: [FRUITS], emoji: "🍍" },
+  { word: "Виноград", categories: [FRUITS], emoji: "🍇" },
+  { word: "Дыня", categories: [FRUITS], emoji: "🍈" },
+  { word: "Гранат", categories: [FRUITS], emoji: "🍎" },
+  { word: "Черника", categories: [FRUITS], emoji: "🫐" },
+  { word: "Малина", categories: [FRUITS], emoji: "🍓" },
 
   // Овощи
-  { word: "Морковь", categories: [VEGETABLES], emoji: "🥕" },
-  { word: "Кукуруза", categories: [VEGETABLES], emoji: "🌽" },
-  { word: "Тыква", categories: [VEGETABLES], emoji: "🎃" },
+  { word: "Помидор", categories: [VEGETABLES], emoji: "🍅" },
+  { word: "Картофель", categories: [VEGETABLES], emoji: "🥔" },
+  { word: "Брокколи", categories: [VEGETABLES], emoji: "🥦" },
+  { word: "Капуста", categories: [VEGETABLES], emoji: "🥬" },
+  { word: "Баклажан", categories: [VEGETABLES], emoji: "🍆" },
+  { word: "Перец", categories: [VEGETABLES], emoji: "🌶️" },
+  { word: "Чеснок", categories: [VEGETABLES], emoji: "🧄" },
+  { word: "Лук", categories: [VEGETABLES], emoji: "🧅" },
+  { word: "Редис", categories: [VEGETABLES], emoji: "🥕" },
+  { word: "Свёкла", categories: [VEGETABLES], emoji: "🥔" },
 
   // Сладости
-  { word: "Пончик", categories: [SWEETS], emoji: "🍩" },
-  { word: "Торт", categories: [SWEETS], emoji: "🎂" },
-  { word: "Конфета", categories: [SWEETS], emoji: "🍬" },
-  { word: "Мёд", categories: [SWEETS], emoji: "🍯" },
+  { word: "Шоколад", categories: [SWEETS], emoji: "🍫" },
+  { word: "Печенье", categories: [SWEETS], emoji: "🍪" },
+  { word: "Кекс", categories: [SWEETS], emoji: "🧁" },
+  { word: "Мармелад", categories: [SWEETS], emoji: "🍬" },
+  { word: "Зефир", categories: [SWEETS], emoji: "🍡" },
+  { word: "Мороженое", categories: [SWEETS], emoji: "🍨" },
+  { word: "Леденец", categories: [SWEETS], emoji: "🍭" },
+  { word: "Вафли", categories: [SWEETS], emoji: "🧇" },
+  { word: "Пудинг", categories: [SWEETS], emoji: "🍮" },
 
   // Выпечка
-  { word: "Хлеб", categories: [BAKERY], emoji: "🍞" },
-  { word: "Пицца", categories: [BAKERY], emoji: "🍕" },
+  { word: "Булочка", categories: [BAKERY], emoji: "🥐" },
+  { word: "Круассан", categories: [BAKERY], emoji: "🥐" },
+  { word: "Багет", categories: [BAKERY], emoji: "🥖" },
+  { word: "Лаваш", categories: [BAKERY], emoji: "🫓" },
+  { word: "Пирог", categories: [BAKERY], emoji: "🥧" },
+  { word: "Крендель", categories: [BAKERY], emoji: "🥨" },
+  { word: "Тост", categories: [BAKERY], emoji: "🍞" },
+  { word: "Сэндвич", categories: [BAKERY], emoji: "🥪" },
 
   // Питомцы
   { word: "Кошка", categories: [PETS], emoji: "🐱" },
   { word: "Собака", categories: [PETS], emoji: "🐶" },
 
   // Ферма
-  { word: "Корова", categories: [FARM], emoji: "🐮" },
-  { word: "Лошадь", categories: [FARM], emoji: "🐴" },
-  { word: "Петух", categories: [FARM], emoji: "🐓" },
+  { word: "Коза", categories: [FARM], emoji: "🐐" },
+  { word: "Свинья", categories: [FARM], emoji: "🐷" },
+  { word: "Утка", categories: [FARM], emoji: "🦆" },
+  { word: "Гусь", categories: [FARM], emoji: "🪿" },
+  { word: "Кролик", categories: [FARM], emoji: "🐰" },
+  { word: "Индюк", categories: [FARM], emoji: "🦃" },
+  { word: "Осёл", categories: [FARM], emoji: "🫏" },
+  { word: "Цыплёнок", categories: [FARM], emoji: "🐤" },
 
   // Хищники
   { word: "Лев", categories: [PREDATORS], emoji: "🦁" },
   { word: "Волк", categories: [PREDATORS], emoji: "🐺" },
   { word: "Тигр", categories: [PREDATORS], emoji: "🐯" },
+  { word: "Лиса", categories: [PREDATORS], emoji: "🦊" },
 
   // Насекомые
   { word: "Пчела", categories: [INSECTS], emoji: "🐝" },
